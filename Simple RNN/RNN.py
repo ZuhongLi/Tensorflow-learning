@@ -31,7 +31,7 @@ class Data:
                 else: self.data_with_rel.append(0)
         return self.without_rel,self.data_with_rel
 
-    #生成循环次数
+   #生成循环次数
     def generate_epochs(self):
         self.generate_data()
         data_x = np.zeros([self.num_batch,self.batch_size],dtype=np.int32)
@@ -78,6 +78,7 @@ class Model:
         self.losses = tf.nn.sparse_softmax_cross_entropy_with_logits(labels=self.y,logits=logits)
         self.total_loss = tf.reduce_mean(self.losses)
         self.train_step = tf.train.AdagradOptimizer(0.1).minimize(self.total_loss)
+        
 
     #定义RNN模型
     def model(self):
