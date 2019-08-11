@@ -22,7 +22,7 @@ def derivatives_sigmoid(x):
 
 #Variable initialization
 epoch=8000 #Setting training iterations
-lr=0.1 #Setting learning rate
+lr=0.12 #Setting learning rate
 inputlayer_neurons = X.shape[1]  # number of features in data set
 hiddenlayer_neurons = 3  # number of hidden layers neurons
 output_neurons = 1   # number of neurons at output layer
